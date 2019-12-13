@@ -1,0 +1,19 @@
+{
+  "name": "rest-shop",
+  "version": "1.0.0",
+  "description": "A Node.js Restful \u001b[D\u001b[D\u001b[D\u001b[D\u001b[DEST\u001b[C\u001b[C\u001b[C API Tutorial Project ()\u001b[DBuild a Simple shop API)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "node",
+    "restful",
+    "api"
+  ],
+  "author": "tharindu",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
