@@ -9,7 +9,8 @@ const orderRoutes = require('./api/routes/orders');
 
 mongoose.connect('mongodb+srv://Tharindu97:Tharindu1997@node-shop-pghg6.mongodb.net/test?retryWrites=true&w=majority',
 { useNewUrlParser: true, useUnifiedTopology: true }
-        );
+);
+mongoose.Promise = global.Promise;
 
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
