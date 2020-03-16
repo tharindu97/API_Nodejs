@@ -18,7 +18,7 @@ router.put('/about/:id', function(req, res){
 
 //delete a about from the db
 router.delete('/about/:id', function(req, res){
-    res.send({type: 'GET'});
+    res.send({type: 'DELETE'});
 });
 
 module.exports = router;
