@@ -1,5 +1,6 @@
 const express = require('express');
 const router = express.Router();
+const About = require('../models/about');
 
 //get a list of about from the db
 router.get('/about', function(req, res){
@@ -8,11 +9,13 @@ router.get('/about', function(req, res){
 
 //add a new about from the db
 router.post('/about', function(req, res){
-    console.log(req.body);
+    About.create(req.body).then(function(about){
+        res.send(about);
+    }); 
     res.send({
         type: 'POST',
         name: req.body.name,
-        rank: req.body.rank
+        rank: req.body.rank 
     });
 });
 
