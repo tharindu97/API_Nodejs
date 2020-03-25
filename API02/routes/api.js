@@ -11,11 +11,6 @@ router.get('/about', function(req, res){
 router.post('/about', function(req, res){
     About.create(req.body).then(function(about){
         res.send(about);
-    }); 
-    res.send({
-        type: 'POST',
-        name: req.body.name,
-        rank: req.body.rank 
     });
 });
 

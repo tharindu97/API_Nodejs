@@ -6,8 +6,10 @@ const mongoose = require('mongoose');
 const app = express();
 
 //connect to mongodb
-mongoose.connect('mongodb+srv://Tharindu97:Tharindu1997@node-shop-pghg6.mongodb.net/test?retryWrites=true&w=majority',
-{ useNewUrlParser: true, useUnifiedTopology: true }
+mongoose.connect('mongodb://localhost/about',
+{ useNewUrlParser: true,
+  useUnifiedTopology: true
+ }
 );
 mongoose.Promise = global.Promise;
 
