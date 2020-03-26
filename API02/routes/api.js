@@ -16,7 +16,11 @@ router.post('/about', function(req, res, next){
 
 //update a about from the db
 router.put('/about/:id', function(req, res){
-    res.send({type: 'PUT'});
+    About.findByIdAndUpdate({_id: req.params.id}, req.body).then(function(){
+        About.findOne({_id: req.params.id}).then(function(about){
+            res.send(about);
+        });
+    });
 });
 
 //delete a about from the db
