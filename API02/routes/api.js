@@ -20,7 +20,10 @@ router.put('/about/:id', function(req, res){
 });
 
 //delete a about from the db
-router.delete('/about/:id', function(req, res){
+router.delete('/about/:id', function(req, res, next){
+    About.findByIdAndRemove({_id: req.params.id}).then(function(about){
+        res.send(about);
+    });
     res.send({type: 'DELETE'});
 });
 
