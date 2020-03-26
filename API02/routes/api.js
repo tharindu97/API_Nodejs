@@ -8,10 +8,10 @@ router.get('/about', function(req, res){
 });
 
 //add a new about from the db
-router.post('/about', function(req, res){
+router.post('/about', function(req, res, next){
     About.create(req.body).then(function(about){
         res.send(about);
-    });
+    }).catch(next);
 });
 
 //update a about from the db
