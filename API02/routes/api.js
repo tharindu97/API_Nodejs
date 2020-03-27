@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const About = require('../models/about');
 
+// create api
+
 //get a list of about from the db
 router.get('/about', function(req, res, next){
     About.find().then(function(about){
